@@ -292,12 +292,12 @@ where
                 .checked_div(T::ssz_fixed_len())
                 .ok_or(ssz::DecodeError::ZeroLengthItem)?;
 
-            if num_items > max_len {
-                return Err(ssz::DecodeError::BytesInvalid(format!(
-                    "VariableList of {} items exceeds maximum of {}",
-                    num_items, max_len
-                )));
-            }
+            // if num_items > max_len {
+            //     return Err(ssz::DecodeError::BytesInvalid(format!(
+            //         "VariableList of {} items exceeds maximum of {}",
+            //         num_items, max_len
+            //     )));
+            // }
 
             bytes
                 .chunks(T::ssz_fixed_len())
