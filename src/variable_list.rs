@@ -330,7 +330,7 @@ where
             })
         } else {
             Err(serde::de::Error::custom(format!(
-                "VariableList length {} exceeds maximum length {}",
+                "VariableList length {} exceeds maximum length {} - modified v3",
                 vec.len(),
                 N::to_usize()
             )))
